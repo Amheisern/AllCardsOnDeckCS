@@ -46,7 +46,7 @@ q -->
 k -->
 
 Data (data Structure)
-String, list, looping, LINQ?, index
+String, list, looping, index
 There are four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
 There are 13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", and "King".
 
@@ -54,7 +54,7 @@ Algorithm
 A
 
 - Make a new list of strings named deck
-- Initialize the list of strings with 52 explicity stated cards from example sections
+- Initialize the list of strings with 52 explicitly stated cards from example sections
 - Shuffle the cards with Fisher Yates (paste algo here )
 
   numberOfCards = length of our deck
@@ -83,11 +83,10 @@ B Using tools NESTED LOOPING
   add newly formed string to the end of the deck list - For Suit = Clubs
   Make a loop that goes through all the ranks
   for each rank, make a new string of the form $"{rank} of clubs"
+  add newly formed string to the end of the deck list - For Suit = Diamonds
+  Make a loop that goes through all the ranks
+  for each rank, make a new string of the form $"{rank} of diamonds "
   add newly formed string to the end of the deck list
-        - For Suit = Diamonds
-            Make a loop that goes through all the ranks
-              for each rank, make a new string of the form $"{rank} of diamonds "
-              add newly formed string to the end of the deck list
 
         - For Suit = Spades
             Make a loop that goes through all the ranks
@@ -98,4 +97,5 @@ B Using tools NESTED LOOPING
             Make a loop that goes through all the ranks
               for each rank, make a new string of the form $"{rank} of hearts"
               add newly formed string to the end of the deck list
+
   -Same as Algo A
