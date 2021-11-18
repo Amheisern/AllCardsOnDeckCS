@@ -90,12 +90,12 @@ namespace AllCardsOnDeckCS
             Console.WriteLine("You have reach a save point");
 
             // - first card = deck[0]
-            var firstcard = deck[0];
+            var firstcardA = deck[0];
             // - second card = deck[1]
-            var secondcard = deck[1];
+            var secondcardA = deck[1];
             // - print first and second card  
-            Console.WriteLine("firstcard: " + firstcard);
-            Console.WriteLine("Secondcard: " + secondcard);
+            Console.WriteLine("firstcard: " + firstcardA);
+            Console.WriteLine("Secondcard: " + secondcardA);
 
             // Algorithm B 
             // - Make a new list of the fours suits
@@ -104,12 +104,46 @@ namespace AllCardsOnDeckCS
             var ranks = new List<string>() { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
             // - Make a new list of strings namer 'deck'
             var deckB = new List<string>();
-            // - Make a loop that goes through the list
-            //   Make a loop that goes through all the 'ranks'
-            //   for each rank, make a new string of the form $"{rank} "of" ${clubs}"
-            //   add newly formed string to the end of the deck list - For Suit = Clubs
-            //   Make a loop that goes through all the ranks
-            //   for each rank, make a new string of the form $"{rank} of clubs"
+            // - Make a loop that goes through all the suits
+            foreach (var suit in suits)
+            {
+
+                //   Make a loop that goes through all the 'ranks'
+                //   add newly formed string to the end of the deck list - For Suit = Clubs
+                foreach (var rank in ranks)
+                {
+                    var card = $"{rank} of {suit}";
+
+                    deckB.Add(card);
+                }
+            }
+            for (var rightIndex = numberOfCards - 1; rightIndex >= 1; rightIndex--)
+            {
+                //   leftIndex = random integer that is greater than or equal to 0 and LESS than rightIndex. See the section "How do we get a random integer"
+                var randomNumberGenerator = new Random();
+                var leftIndex = randomNumberGenerator.Next(rightIndex);
+                // leftIndex = random integer >= 0 and < rightIndex
+                //   Now swap the values at rightIndex and leftIndex by doing this:
+                //   leftCard = the value from deck[leftIndex]
+                var leftCard = deck[leftIndex];
+                //   rightCard = the value from deck[rightIndex]
+                var rightCard = deck[rightIndex];
+                //   deck[rightIndex] = leftCard
+                deck[rightIndex] = leftCard;
+                //   deck[leftIndex] = rightCard
+                deck[leftIndex] = rightCard;
+            }
+
+            // - first card = deck[0]
+            var firstcardB = deck[0];
+            // - second card = deck[1]
+            var secondcardB = deck[1];
+            // - print first and second card  
+            Console.WriteLine("firstcard: " + firstcardB);
+            Console.WriteLine("Secondcard: " + secondcardB);
+
+            Console.WriteLine("You have reach a save point");
+
             //   add newly formed string to the end of the deck list - For Suit = Diamonds
             //   Make a loop that goes through all the ranks
             //   for each rank, make a new string of the form $"{rank} of diamonds "
