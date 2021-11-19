@@ -115,6 +115,7 @@ namespace AllCardsOnDeckCS
                     var card = $"{rank} of {suit}";
 
                     deckB.Add(card);
+                    Console.WriteLine(card);
                 }
             }
             for (var rightIndex = numberOfCards - 1; rightIndex >= 1; rightIndex--)
@@ -132,7 +133,13 @@ namespace AllCardsOnDeckCS
                 deck[rightIndex] = leftCard;
                 //   deck[leftIndex] = rightCard
                 deck[leftIndex] = rightCard;
+
             }
+            foreach (var card in deck)
+            {
+                Console.WriteLine(card);
+            }
+
 
             // - first card = deck[0]
             var firstcardB = deck[0];
