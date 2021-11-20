@@ -149,6 +149,16 @@ namespace AllCardsOnDeckCS
             Console.WriteLine("firstcard: " + firstcardB);
             Console.WriteLine("Secondcard: " + secondcardB);
 
+            //Creating 1 hand (lists) of five cards and displaying the hands
+            //var hand1 = deck[0][1];
+            //This cannot be the best way of doing this, but i was failing at making a new list that would be better
+            // populated with cards with a random index.  I dont have the time to spend on this now and 
+            // will come back to it at some point.  Also need to figure out how to format text the way i want
+            Console.WriteLine("Player 1: " + deck[0] + deck[1] + deck[2] + deck[3] + deck[4]);
+            Console.WriteLine("Player 2: " + deck[5] + deck[6] + deck[7] + deck[8] + deck[9]);
+
+            //var hand1 = deck[new List<string> = (2, 3, 4, 5)];
+
             Console.WriteLine("You have reach a save point");
 
             //   add newly formed string to the end of the deck list - For Suit = Diamonds
